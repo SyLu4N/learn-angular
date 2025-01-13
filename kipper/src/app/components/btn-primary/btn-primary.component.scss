@@ -1,0 +1,45 @@
+@use "../../../color-variables.scss" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    .main {
+      opacity: 0;
+    }
+  }
+
+  .btn {
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: -webkit-linear-gradient(0deg, $default-500, $default-400);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 40px;
+    transition: all 1000ms;
+    cursor: pointer;
+    z-index: 2;
+  
+    &:disabled {
+      opacity: 0.6;
+      cursor: no-drop;
+    }
+  
+    &.white {
+      background-color: white;
+      color: $letter-500;
+      font-size: 16px;
+    }
+  
+    &.espelho {
+      z-index: 1;
+      position: absolute;
+      transition: all 1000ms;
+      background: -webkit-linear-gradient(180deg, $default-500, $default-400);
+    }
+  }
+}

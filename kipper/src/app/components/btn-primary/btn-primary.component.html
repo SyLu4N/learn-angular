@@ -1,0 +1,25 @@
+<div class="container">
+  <button 
+  (click)="submit()"
+  [class]="'main btn ' + variant"
+  [disabled]="disabled"
+  >
+  @if(loading) {
+    carregando...
+  }@else {
+    {{ btnText }}
+  }
+  </button>
+
+  <button 
+    (click)="submit()"
+    [class]="'espelho btn ' + variant"
+    [disabled]="disabled"  
+  >
+    @if(loading) {
+      carregando...
+    }@else {
+      {{ btnText }}
+    }
+  </button>
+</div>

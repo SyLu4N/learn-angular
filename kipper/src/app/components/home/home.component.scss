@@ -1,0 +1,81 @@
+@use "../../../color-variables.scss" as *;
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+
+  gap: 8px;
+
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    color: $letter-50;
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 900;
+    width: 577px;
+    color: $letter-500;
+  }
+}
+
+.benefit-section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: auto;
+
+  .benefit-data {
+    border-bottom: 10px solid $default-400;
+    padding-bottom: 27px;
+
+    h2 {
+      font-size: 60px;
+      color: $letter-400;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-size: 40px;
+    max-width: 935px;
+    font-style: italic;
+    font-weight: 300;
+
+    b {
+      background: -webkit-linear-gradient(0deg, $default-500, $default-300);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+  }
+}
+
+.cta-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1080px) {
+  .main-section {
+    flex-direction: row;
+  }
+
+  .benefit-section {
+    flex-direction: row;
+  }
+}
